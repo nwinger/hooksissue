@@ -1,0 +1,103 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.list {
+  &-colors {
+    @include display-flex;
+    @include flex-flow(row, wrap);
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style-type: none;
+    margin: 0 - 1rem;
+    padding: 0;
+
+    & > .item {
+      @include flex(0, 0, auto);
+      padding: 1rem;
+      width: 16%;
+
+      @include maxwidth-wide {
+        width: 25%;
+      }
+
+      @include maxwidth-medium-plus {
+        width: 33%;
+      }
+
+      @include maxwidth-small-plus {
+        width: 50%;
+      }
+
+      @include maxwidth-small {
+        width: 100%;
+      }
+
+      .color {
+        &-sample {
+          width: 100%;
+          padding-top: 100%;
+          border: 1px dashed rgba(0, 0, 0, 0.1);
+
+          &.deep-koamaru {
+            background: $color-deep-koamaru;
+          }
+          &.cobalt-blue {
+            background: $color-cobalt-blue;
+          }
+          &.deep-blue {
+            background: $color-deep-blue;
+          }
+          &.dark-blue {
+            background: $color-dark-blue;
+          }
+          &.trinidad {
+            background: $color-trinidad;
+          }
+          &.trinidad-dark {
+            background: $color-trinidad-dark;
+          }
+          &.black {
+            background: $color-black;
+          }
+          &.deep-grey {
+            background: $color-deep-grey;
+          }
+          &.dark-grey {
+            background: $color-dark-grey;
+          }
+          &.grey {
+            background: $color-grey;
+          }
+          &.light-grey {
+            background: $color-light-grey;
+          }
+          &.white {
+            background: $color-white;
+          }
+
+          &-wrap {
+            @include display-flex;
+            @include flex-flow(column, nowrap);
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 100%;
+          }
+        }
+
+        &-label {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        &-code {
+          font-size: 32px;
+          text-transform: uppercase;
+
+          @include maxwidth-medium-plus {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}

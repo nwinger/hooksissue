@@ -1,0 +1,574 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+
+  @include maxwidth-small-plus {
+    font-size: 30px;
+  }
+
+  .panel-demo.mobile & {
+    font-size: 30px;
+  }
+
+  .panel-demo.desktop & {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-size: 38px;
+  font-weight: 700;
+
+  @include maxwidth-small-plus {
+    font-size: 25px;
+  }
+
+  .panel-demo.mobile & {
+    font-size: 25px;
+  }
+
+  .panel-demo.desktop & {
+    font-size: 38px;
+  }
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 25px;
+  font-weight: 700;
+
+  @include maxwidth-small-plus {
+    font-size: 20px;
+  }
+  .panel-demo.mobile & {
+    font-size: 20px;
+  }
+
+  .panel-demo.desktop & {
+    font-size: 25px;
+  }
+}
+
+.lead {
+  &-para {
+    &-1 {
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    &-2 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+.sub {
+  &-title {
+    font-size: 25px;
+    font-weight: 700;
+
+    &-small {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+.menu {
+  &-text {
+    &-main {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &-top {
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+
+/* Icon font */
+
+/* $icomoon-font-family: "./assets/icons/fonts/" !default;*/
+$icomoon-font-family: 'sor-designguide-icons' !default;
+$icomoon-font-path: './assets/icons' !default;
+
+@font-face {
+  font-family: 'dgIcons';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff2') format('woff2'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'dgIcons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.icon {
+    &-finger-scan {
+      &:before {
+        content: $icon-finger-scan;
+      }
+    }
+    &-map-pin-solid {
+      &:before {
+        content: $icon-map-pin-solid;
+      }
+    }
+    &-phone {
+      &:before {
+        content: $icon-phone;
+      }
+    }
+    &-email {
+      &:before {
+        content: $icon-email;
+      }
+    }
+    &-grid {
+      &:before {
+        content: $icon-grid;
+      }
+    }
+    &-stock-savings {
+      &:before {
+        content: $icon-stock-savings;
+      }
+    }
+    &-anonymous-advicer {
+      &:before {
+        content: $icon-anonymous-advicer;
+      }
+    }
+    &-autoreg {
+      &:before {
+        content: $icon-autoreg;
+      }
+    }
+    &-avtalegiro {
+      &:before {
+        content: $icon-avtalegiro;
+      }
+    }
+    &-bedriftfinansiering {
+      &:before {
+        content: $icon-bedriftfinansiering;
+      }
+    }
+    &-bedriftsnett {
+      &:before {
+        content: $icon-bedriftsnett;
+      }
+    }
+    &-betal-fra-konto {
+      &:before {
+        content: $icon-betal-fra-konto;
+      }
+    }
+    &-betal-til-konto {
+      &:before {
+        content: $icon-betal-til-konto;
+      }
+    }
+    &-wallet {
+      &:before {
+        content: $icon-wallet;
+      }
+    }
+    &-betaling {
+      &:before {
+        content: $icon-betaling;
+      }
+    }
+    &-trad-is-betaling {
+      &:before {
+        content: $icon-trad-is-betaling;
+      }
+    }
+    &-visa-cards {
+      &:before {
+        content: $icon-visa-cards;
+      }
+    }
+    &-credit-cards {
+      &:before {
+        content: $icon-credit-cards;
+        color: #231464;
+      }
+    }
+    &-credit-card {
+      &:before {
+        content: $icon-credit-card;
+      }
+    }
+    &-master-card {
+      &:before {
+        content: $icon-master-card;
+      }
+    }
+    &-visa-card {
+      &:before {
+        content: $icon-visa-card;
+      }
+    }
+    &-betalingsterminal {
+      &:before {
+        content: $icon-betalingsterminal;
+      }
+    }
+    &-betalt-regning {
+      &:before {
+        content: $icon-betalt-regning;
+      }
+    }
+    &-locked {
+      &:before {
+        content: $icon-locked;
+      }
+    }
+    &-open-lock {
+      &:before {
+        content: $icon-open-lock;
+      }
+    }
+    &-car-loan {
+      &:before {
+        content: $icon-car-loan;
+      }
+    }
+    &-bokliste {
+      &:before {
+        content: $icon-bokliste;
+      }
+    }
+    &-house-loan {
+      &:before {
+        content: $icon-house-loan;
+      }
+    }
+    &-boat-loan {
+      &:before {
+        content: $icon-boat-loan;
+      }
+    }
+    &-chat {
+      &:before {
+        content: $icon-chat;
+      }
+    }
+    &-e-invoice {
+      &:before {
+        content: $icon-e-invoice;
+      }
+    }
+    &-e-giro-payment {
+      &:before {
+        content: $icon-e-giro-payment;
+      }
+    }
+    &-Epost {
+      &:before {
+        content: $icon-Epost;
+      }
+    }
+    &-latest-transactions {
+      &:before {
+        content: $icon-latest-transactions;
+      }
+    }
+    &-filter {
+      &:before {
+        content: $icon-filter;
+      }
+    }
+    &-transfere {
+      &:before {
+        content: $icon-transfere;
+      }
+    }
+    &-finance-advicer {
+      &:before {
+        content: $icon-finance-advicer;
+      }
+    }
+    &-advicer {
+      &:before {
+        content: $icon-advicer;
+      }
+    }
+    &-due {
+      &:before {
+        content: $icon-due;
+      }
+    }
+    &-due-folder {
+      &:before {
+        content: $icon-due-folder;
+      }
+    }
+    &-insurance {
+      &:before {
+        content: $icon-insurance;
+      }
+    }
+    &-get-pin {
+      &:before {
+        content: $icon-get-pin;
+      }
+    }
+    &-home {
+      &:before {
+        content: $icon-home;
+      }
+    }
+    &-info-ring {
+      &:before {
+        content: $icon-info-ring;
+      }
+    }
+    &-settings {
+      &:before {
+        content: $icon-settings;
+      }
+    }
+    &-investor-relations {
+      &:before {
+        content: $icon-investor-relations;
+      }
+    }
+    &-contacts {
+      &:before {
+        content: $icon-contacts;
+      }
+    }
+    &-leasing {
+      &:before {
+        content: $icon-leasing;
+      }
+    }
+    &-person {
+      &:before {
+        content: $icon-person;
+      }
+    }
+    &-add-person {
+      &:before {
+        content: $icon-add-person;
+      }
+    }
+    &-family {
+      &:before {
+        content: $icon-family;
+      }
+    }
+    &-friend-payment {
+      &:before {
+        content: $icon-friend-payment;
+      }
+    }
+    &-location {
+      &:before {
+        content: $icon-location;
+      }
+    }
+    &-loan {
+      &:before {
+        content: $icon-loan;
+      }
+    }
+    &-Mobiltelefon {
+      &:before {
+        content: $icon-Mobiltelefon;
+      }
+    }
+    &-nettbank {
+      &:before {
+        content: $icon-nettbank;
+      }
+    }
+    &-obs {
+      &:before {
+        content: $icon-obs;
+      }
+    }
+    &-ocr {
+      &:before {
+        content: $icon-ocr;
+      }
+    }
+    &-papers {
+      &:before {
+        content: $icon-papers;
+      }
+    }
+    &-pc {
+      &:before {
+        content: $icon-pc;
+      }
+    }
+    &-pen {
+      &:before {
+        content: $icon-pen;
+      }
+    }
+    &-pension-savings {
+      &:before {
+        content: $icon-pension-savings;
+      }
+    }
+    &-print {
+      &:before {
+        content: $icon-print;
+      }
+    }
+    &-saving {
+      &:before {
+        content: $icon-saving;
+      }
+    }
+    &-question-ring {
+      &:before {
+        content: $icon-question-ring;
+      }
+    }
+    &-search {
+      &:before {
+        content: $icon-search;
+      }
+    }
+    &-facebook {
+      &:before {
+        content: $icon-facebook;
+      }
+    }
+    &-facebook-solid {
+      &:before {
+        content: $icon-facebook-solid;
+      }
+    }
+    &-google-plus {
+      &:before {
+        content: $icon-google-plus;
+      }
+    }
+    &-instagram {
+      &:before {
+        content: $icon-instagram;
+      }
+    }
+    &-snapchat {
+      &:before {
+        content: $icon-snapchat;
+      }
+    }
+    &-twitter {
+      &:before {
+        content: $icon-twitter;
+      }
+    }
+    &-youtube {
+      &:before {
+        content: $icon-youtube;
+      }
+    }
+    &-exit {
+      &:before {
+        content: $icon-exit;
+      }
+    }
+    &-fellestomt-bra {
+      &:before {
+        content: $icon-fellestomt-bra;
+      }
+    }
+    &-hammer {
+      &:before {
+        content: $icon-hammer;
+      }
+    }
+    &-office {
+      &:before {
+        content: $icon-office;
+      }
+    }
+    &-bedroom {
+      &:before {
+        content: $icon-bedroom;
+      }
+    }
+    &-lot {
+      &:before {
+        content: $icon-lot;
+      }
+    }
+    &-arrow-left-circle {
+      &:before {
+        content: $icon-arrow-left-circle;
+      }
+    }
+    &-arrow-right-circle {
+      &:before {
+        content: $icon-arrow-right-circle;
+      }
+    }
+    &-arrow-down-circle {
+      &:before {
+        content: $icon-arrow-down-circle;
+      }
+    }
+    &-arrow-up-circle {
+      &:before {
+        content: $icon-arrow-up-circle;
+      }
+    }
+    &-chevron-left {
+      &:before {
+        content: $icon-chevron-left;
+      }
+    }
+    &-chevron-right {
+      &:before {
+        content: $icon-chevron-right;
+      }
+    }
+    &-chevron-down {
+      &:before {
+        content: $icon-chevron-down;
+      }
+    }
+    &-chevron-up {
+      &:before {
+        content: $icon-chevron-up;
+      }
+    }
+    &-check {
+      &:before {
+        content: $icon-check;
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.app {
+  position: relative;
+  @include flex(1, 1, auto);
+  @include display-flex;
+  @include flex-flow(row, nowrap);
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  @include maxwidth-medium-plus {
+    overflow: auto;
+  }
+
+  & > .page-navigation {
+    @include flex(0, 0, auto);
+    width: 20%;
+    max-width: 360px;
+    height: 100%;
+
+    @include maxwidth-medium-plus {
+      width: 33.3333%;
+    }
+
+    @include maxwidth-small-plus {
+      flex: none;
+      display: none;
+    }
+  }
+
+  & > .content-wrap {
+    @include flex(1, 1, auto);
+    background: $color-light-grey;
+    width: 80%;
+    max-width: 100%;
+
+    @include maxwidth-medium-plus {
+      width: 66.6667%;
+    }
+  }
+}
+
+.page {
+  &-content,
+  &-header {
+    padding: 1rem;
+  }
+
+  &-header {
+    @include display-flex;
+    @include flex-flow(row, nowrap);
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    overflow: hidden;
+
+    background: $color-primary;
+    color: $color-white;
+
+    @include maxwidth-medium-plus {
+      @include flex-flow(column, nowrap);
+      justify-content: flex-start;
+      height: auto;
+      overflow: auto;
+    }
+
+    & > .header {
+      &-logo {
+        @include flex(0, 1, auto);
+        @include display-flex;
+        @include flex-flow(column, nowrap);
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 30%;
+        max-width: 200px;
+        padding: 0 1rem 0 0;
+
+        @include maxwidth-medium-plus {
+          width: 100%;
+        }
+      }
+
+      &-content {
+        @include flex(1, 1, auto);
+        min-width: 320px;
+        padding: 0 1rem;
+
+        @include maxwidth-medium-plus {
+          min-width: 0;
+        }
+
+        h1 {
+          margin: 0;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  &-content {
+    @include flex(1, 1, auto);
+    height: calc(100vh - 6rem);
+    overflow: auto;
+
+    @include maxwidth-small-plus {
+      height: calc(100vh - 8rem);
+    }
+  }
+}
+
+.logo-wrap {
+  width: 100%;
+}

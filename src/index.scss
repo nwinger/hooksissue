@@ -1,0 +1,36 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "colors/Colors.scss";
+@import "typography/typography.scss";
+@import "components/buttons/buttons.scss";
+@import "components/links/links.scss";
+@import "components/inputs/inputs.scss";
+
+@import url("https://preprod.sor.no/globalassets/resurser/fonts/163425/922905C77651AFD56.css");
+
+html,
+:default {
+  font-size: 16px;
+  font-family: $font-base-family;
+  line-height: 1.4333;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}

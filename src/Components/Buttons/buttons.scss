@@ -1,0 +1,85 @@
+@import "../../variables.scss";
+
+button,
+input [type="button"],
+input [type="submit"] input [type="cancel"] {
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.btn {
+  border: 1px solid $color-primary;
+  padding: 0.8rem;
+  min-width: 200px;
+  height: 46px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0.25rem;
+
+  &:hover {
+    background: $color-light-grey;
+    border-color: $color-light-grey;
+  }
+
+  &.with-icon {
+    position: relative;
+    padding-left: 2rem;
+
+    & > .icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-style: normal;
+      font-size: 1.25rem;
+    }
+  }
+
+  &.btn {
+    &-primary {
+      background: $color-primary;
+      color: $color-white;
+
+      &:hover {
+        background: $color-dark-blue;
+        border-color: $color-dark-blue;
+      }
+
+      &.state-hover {
+        background: $color-dark-blue;
+        border-color: $color-dark-blue;
+      }
+    }
+
+    &-secondary {
+      background: $color-trinidad;
+      border-color: $color-trinidad;
+      color: $color-white;
+
+      &:hover {
+        background: $color-trinidad-dark;
+        border-color: $color-trinidad-dark;
+      }
+
+      &.state-hover {
+        background: $color-trinidad-dark;
+        border-color: $color-trinidad-dark;
+      }
+    }
+
+    &-outline {
+      background: $color-white;
+      border-color: $color-primary;
+
+      &:hover {
+        background: $color-light-grey;
+      }
+
+      &.state-hover {
+        background: $color-light-grey;
+        border-color: $color-light-grey;
+      }
+    }
+  }
+}

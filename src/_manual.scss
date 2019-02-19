@@ -1,0 +1,72 @@
+.guide {
+  &-section {
+    padding: 2rem 0;
+  }
+}
+
+.panel {
+  &-demo,
+  &-markup,
+  &-css,
+  &-js {
+    position: relative;
+  }
+
+  &-markup,
+  &-css {
+    margin: 0 0 1rem 0;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px dashed rgba(0, 0, 0, 0.05);
+  }
+
+  &-demo {
+    background: $color-white;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+  }
+
+  &-markup {
+  }
+
+  &-css {
+  }
+
+  &-section {
+    margin-bottom: 2rem;
+  }
+
+  &-columns {
+    @include display-flex;
+    @include flex-flow(row, wrap);
+    justify-content: space-between;
+    margin: 0 -1rem;
+
+    @include maxwidth-medium-plus {
+      @include flex-direction(column);
+    }
+
+    & > .column {
+      @include flex(1, 1, auto);
+      padding: 1rem;
+    }
+
+    &.col {
+      &-2 {
+        & > .column {
+          width: 50%;
+
+          @include maxwidth-medium-plus {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+pre[class*="language-"] {
+}
+
+code[class*="language-"] {
+}
